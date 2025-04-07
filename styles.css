@@ -21,13 +21,23 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    background-color: var(--primary-color);
+    color: #121212; /* Ensure text color is black */
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .logo img {
+    border-radius: 5px;
     max-height: 40px;
+}
+
+nav {
+    display: block;
+}
+
+nav.show {
+    display: block;
 }
 
 nav ul {
@@ -40,7 +50,7 @@ nav ul li {
 }
 
 nav a {
-    color: var(--text-color);
+    color: #121212; /* Ensure nav links are black */
     text-decoration: none;
 }
 
@@ -152,39 +162,53 @@ nav a {
 
 .hamburger{
     display: none;
+    font-size: x-large; 
+
 }
+
 .hamburger span{
     display: block;
-    width: 25px;
-    height: 3px;
+    width: auto;
     background-color: var(--text-color);
-    margin: 5px 0;
-    transition: all 0.3s ease;
+    margin: 3px 0;
+    transition: all 0.5s ease;
 }
 
 
 @media (max-width: 600px) {
-    nav ul {
+    nav {
         display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--primary-color);
+        color: #121212;
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 
     header {
         justify-content: space-between;
     }
-    .hamburger{
-        display: block;
-    }
-    .nav-mobile{
-        display: none;
-    }
-    .nav-mobile ul {
-        display: block;
-    }
 
-    .nav-mobile ul li{
-        margin-left: 0;
-        padding: 10px;
-        border-bottom: 1px solid var(--border-color);
+    .hamburger {
+        display: block;
     }
 }
 

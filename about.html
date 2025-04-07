@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.PNG" alt="Mwafrika Brands Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="print.html">Print</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">☰</div>
+    </header>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Learn more about Mwafrika Brands, our team, achievements, and what our customers say about us.</p>
+
+        <section>
+            <h2>Our Team</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="placeholder_team1.PNG" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="card">
+                    <img src="placeholder_team2.PNG" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Creative Director</p>
+                </div>
+                <div class="card">
+                    <img src="placeholder_team3.PNG" alt="Team Member 3">
+                    <h3>Michael Brown</h3>
+                    <p>Operations Manager</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Achievements</h2>
+            <ul>
+                <li><span class="material-icons">check_circle</span> Over 500 successful projects completed</li>
+                <li><span class="material-icons">check_circle</span> Trusted by 300+ clients</li>
+                <li><span class="material-icons">check_circle</span> Awarded Best Branding Agency 2023</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Testimonials</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Mwafrika Brands transformed our business with their amazing branding services!"</p>
+                    <p>- Alice Johnson</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Their team is professional, creative, and reliable. Highly recommended!"</p>
+                    <p>- David Wilson</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMobile = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav a');
+
+        // Toggle nav visibility on hamburger click
+        hamburger.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent click from propagating to document
+            if (window.innerWidth <= 600) {
+                navMobile.classList.toggle('show');
+            }
+        });
+
+        // Hide nav when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!navMobile.contains(event.target) && !hamburger.contains(event.target)) {
+                navMobile.classList.remove('show');
+            }
+        });
+
+        // Hide nav when navigating to another page
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMobile.classList.remove('show');
+            });
+        });
+    });
+    </script>
+</body>
+</html>
