@@ -149,6 +149,20 @@ nav a {
     border: 1px solid var(--border-color);
 }
 
+
+.hamburger{
+    display: none;
+}
+.hamburger span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+
 @media (max-width: 600px) {
     nav ul {
         display: none;
@@ -173,9 +187,7 @@ nav a {
         border-bottom: 1px solid var(--border-color);
     }
 }
-.hamburger{
-    display: none;
-}
+
 
 
 
