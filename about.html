@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <meta name="description" content="About Mwafrika Brands - Learn about our company, mission, and team dedicated to creative excellence.">
+    <meta name="keywords" content="about, company, mission, team, branding">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About Mwafrika Brands">
+    <meta property="og:description" content="Learn more about Mwafrika Brands and our commitment to creative excellence.">
+    <meta property="og:image" content="images/logo.PNG">
+    <meta property="og:url" content="https://mwafrika-brands.com/about.html">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="canonical" href="https://mwafrika-brands.com/about.html">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="images/logo.PNG" sizes="192x192">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>:root{ --gradient: linear-gradient(135deg, rgba(255,215,0,0.5) 0%, rgba(255,237,78,0.5) 100%); } header, .top-banner, .card a, .quote-form button { background: var(--gradient) !important; }</style>
+    <title>About Us - Mwafrika Brands</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="logo.PNG" alt="Mwafrika Brands Logo">
+                <img src="images/logo.PNG" alt="Mwafrika Brands Logo">
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="print.html">Print</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="other-products.html">Other Products</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
         <div class="hamburger">☰</div>
@@ -34,17 +49,17 @@
             <h2>Our Team</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="placeholder_team1.PNG" alt="Team Member 1">
+                    <img src="images/placeholder_team1.PNG" alt="Team Member 1">
                     <h3>John Doe</h3>
                     <p>Founder & CEO</p>
                 </div>
                 <div class="card">
-                    <img src="placeholder_team2.PNG" alt="Team Member 2">
+                    <img src="images/placeholder_team2.PNG" alt="Team Member 2">
                     <h3>Jane Smith</h3>
                     <p>Creative Director</p>
                 </div>
                 <div class="card">
-                    <img src="placeholder_team3.PNG" alt="Team Member 3">
+                    <img src="images/placeholder_team3.PNG" alt="Team Member 3">
                     <h3>Michael Brown</h3>
                     <p>Operations Manager</p>
                 </div>
@@ -102,6 +117,11 @@
             });
         });
     });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
     </script>
 </body>
 </html>

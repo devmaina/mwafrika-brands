@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
+    <meta name="description" content="Products - Browse our range of merchandise and products including jerseys, mugs, caps, and accessories.">
+    <meta name="keywords" content="products, merchandise, jerseys, mugs, caps, accessories">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Products - Mwafrika Brands">
+    <meta property="og:description" content="Shop our collection of quality products and merchandise.">
+    <meta property="og:image" content="images/logo.PNG">
+    <meta property="og:url" content="https://mwafrika-brands.com/products.html">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="canonical" href="https://mwafrika-brands.com/products.html">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="images/logo.PNG" sizes="192x192">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>:root{ --gradient: linear-gradient(135deg, rgba(255,215,0,0.5) 0%, rgba(255,237,78,0.5) 100%); } header, .top-banner, .card a, .quote-form button { background: var(--gradient) !important; }</style>
+    <title>Products - Mwafrika Brands</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="logo.PNG" alt="Mwafrika Brands Logo">
+                <img src="images/logo.PNG" alt="Mwafrika Brands Logo">
             </a>
         </div>
         <nav>
@@ -18,7 +33,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="other-products.html">Other Products</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
@@ -31,16 +47,16 @@
 
         <div class="card-grid">
             <div class="card">
-                <img src="placeholder_watch.PNG" alt="Designer Watches">
-                <h3>Designer Watches</h3>
-                <p>Stylish designer watches for every occasion.</p>
-                <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Designer%20Watches">Buy Now</a>
+                <img src="images/jersey-printing-25.jpg" alt="Sports Apparel">
+                <h3>Sports Apparel</h3>
+                <p>Jerseys, kits, and more.</p>
+                <a href="sports.html">View Products</a>
             </div>
             <div class="card">
-                <img src="placeholder_phone.PNG" alt="Phone Accessories">
-                <h3>Phone Accessories</h3>
-                <p>Wide variety of phone accessories for all models.</p>
-                <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Phone%20Accessories">Buy Now</a>
+                <img src="images/mug-printing-gifts.jpg" alt="Other Products">
+                <h3>Other Products</h3>
+                <p>Caps, mugs, and more.</p>
+                <a href="other-products.html">View Products</a>
             </div>
         </div>
     </div>
@@ -72,6 +88,11 @@
             });
         });
     });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
     </script>
 </body>
 </html>

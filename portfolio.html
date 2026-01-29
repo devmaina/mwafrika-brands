@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Portfolio</title>
+    <meta name="description" content="Mwafrika Brands Portfolio - View our diverse collection of branding, printing, and creative projects.">
+    <meta name="keywords" content="portfolio, projects, branding, printing, design">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mwafrika Brands - Portfolio">
+    <meta property="og:description" content="Explore our portfolio of creative and branding projects.">
+    <meta property="og:image" content="images/logo.PNG">
+    <meta property="og:url" content="https://mwafrika-brands.com/portfolio.html">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="canonical" href="https://mwafrika-brands.com/portfolio.html">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="images/logo.PNG" sizes="192x192">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>:root{ --gradient: linear-gradient(135deg, rgba(255,215,0,0.5) 0%, rgba(255,237,78,0.5) 100%); } header, .top-banner, .card a, .quote-form button { background: var(--gradient) !important; }</style>
+    <title>Our Portfolio - Mwafrika Brands</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="logo.PNG" alt="Mwafrika Brands Logo">
+                <img src="images/logo.PNG" alt="Mwafrika Brands Logo">
             </a>
         </div>
         <nav>
@@ -86,6 +100,11 @@
             });
         });
     });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
     </script>
 </body>
 </html>

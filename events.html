@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events, PA, & Sound</title>
+    <meta name="description" content="Events Services - Professional event planning and management by Mwafrika Brands.">
+    <meta name="keywords" content="events, event planning, event management, PA systems, sound">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Events - Mwafrika Brands">
+    <meta property="og:description" content="Professional event management and services from Mwafrika Brands.">
+    <meta property="og:image" content="images/logo.PNG">
+    <meta property="og:url" content="https://mwafrika-brands.com/events.html">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="canonical" href="https://mwafrika-brands.com/events.html">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="images/logo.PNG" sizes="192x192">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>:root{ --gradient: linear-gradient(135deg, rgba(255,215,0,0.5) 0%, rgba(255,237,78,0.5) 100%); } header, .top-banner, .card a, .quote-form button { background: var(--gradient) !important; }</style>
+    <title>Events, PA, & Sound - Mwafrika Brands</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="logo.PNG" alt="Mwafrika Brands Logo">
+                <img src="images/logo.PNG" alt="Mwafrika Brands Logo">
             </a>
         </div>
         <nav>
@@ -18,7 +33,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="other-products.html">Other Products</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
@@ -31,19 +47,19 @@
 
         <div class="card-grid">
             <div class="card">
-                <img src="wedding.jpg" alt="Wedding Events">
+                <img src="images/wedding.jpg" alt="Wedding Events">
                 <h3>Wedding Events</h3>
                 <p>Make your special day unforgettable with our professional event management and sound systems.</p>
                 <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Wedding%20Events">Request a Quote</a>
             </div>
             <div class="card">
-                <img src="club.jpg" alt="Club Events">
+                <img src="images/club.jpg" alt="Club Events">
                 <h3>Club Events</h3>
                 <p>High-energy sound systems and event management for clubs and parties.</p>
                 <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Club%20Events">Request a Quote</a>
             </div>
             <div class="card">
-                <img src="football.jpeg" alt="Football Events">
+                <img src="images/football.jpeg" alt="Football Events">
                 <h3>Football Events</h3>
                 <p>Comprehensive sound and event management for sports events.</p>
                 <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Football%20Events">Request a Quote</a>
@@ -79,6 +95,11 @@
             });
         });
     });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
     </script>
 </body>
 </html>

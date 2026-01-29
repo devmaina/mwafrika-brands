@@ -1,0 +1,32 @@
+{
+  "name": "Mwafrika Brands",
+  "short_name": "Mwafrika",
+  "description": "Your one-stop shop for all your branding, printing, and creative needs. Custom jerseys, graphics, photography, video editing, and more.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#FFD700",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "images/logo.PNG",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/logo.PNG",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "services"],
+  "screenshots": [
+    {
+      "src": "images/logo.PNG",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}

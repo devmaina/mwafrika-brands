@@ -1,5 +1,8 @@
 :root {
     --primary-color: #FFD700;
+    --primary-light: #FFED4E;
+    --accent-color: #FFC107;
+    --gradient: linear-gradient(135deg, rgba(255,215,0,0.5) 0%, rgba(255,237,78,0.5) 100%);
     --secondary-color: #333;
     --background-color: #121212;
     --text-color: #EEE;
@@ -7,24 +10,31 @@
     --border-color: #444;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Use Nunito font */
 body {
-
     font-family: 'Nunito', sans-serif;
+}
 
-
+body {
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--primary-color);
-    color: #121212; /* Ensure text color is black */
+    background: var(--gradient);
+    color: #fff;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 12px;
 }
 
 .logo img {
@@ -46,44 +56,47 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 12px;
 }
 
 nav a {
-    color: #121212; /* Ensure nav links are black */
+    color: #fff;
     text-decoration: none;
 }
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 12px auto;
+    padding: 0 12px;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
 }
 
 .card {
     background-color: var(--card-background);
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 6px;
+    padding: 12px;
     text-align: center;
     border: 1px solid var(--border-color);
 }
 
 .card img {
-    max-width: 150px;
-    margin-bottom: 1px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 120px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
     margin-bottom: 10px;
-    color: var(--primary-color);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .card p {
@@ -92,12 +105,15 @@ nav a {
 
 .card .price {
     font-weight: bold;
-    color: var(--primary-color);
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .card a {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background: var(--gradient);
+    color: #fff;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
@@ -106,9 +122,9 @@ nav a {
 
 .footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 12px 0;
     border-top: 1px solid var(--border-color);
-    margin-top: 30px;
+    margin-top: 18px;
 }
 
 .footer p {
@@ -125,25 +141,25 @@ nav a {
 
 .quote-form {
     background-color: var(--card-background);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
     border: 1px solid var(--border-color);
 }
 
 .quote-form input, .quote-form textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 8px;
     background-color: var(--background-color);
     border: 1px solid var(--border-color);
     color: var(--text-color);
 }
 
 .quote-form button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 15px;
+    background: var(--gradient);
+    color: #fff;
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -155,9 +171,9 @@ nav a {
 
 .testimonial {
     background-color: var(--card-background);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
     border: 1px solid var(--border-color);
 }
 
@@ -212,6 +228,66 @@ nav a {
     .hamburger {
         display: block;
     }
+}
+
+/* Top banner for Sport Apparel */
+.top-banner{
+    background: var(--gradient);
+    color: #fff;
+    text-align: center;
+    padding: 6px 8px;
+    font-weight: 700;
+}
+
+/* Hero carousel */
+.hero{
+    position: relative;
+    width: 80vw;
+    margin: 16px auto 12px;
+    height: 56vh;
+    min-height: 280px;
+    max-height: 540px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.hero-slide{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.03);
+    animation: slideFade 15s infinite;
+}
+.hero-slide:nth-child(1){ animation-delay: 0s; }
+.hero-slide:nth-child(2){ animation-delay: 5s; }
+.hero-slide:nth-child(3){ animation-delay: 10s; }
+
+@keyframes slideFade{
+    0% { opacity: 0; transform: scale(1.03); }
+    5% { opacity: 1; transform: scale(1); }
+    30% { opacity: 1; transform: scale(1); }
+    35% { opacity: 0; transform: scale(0.98); }
+    100% { opacity: 0; }
+}
+
+.hero-caption{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    padding: 8px 14px;
+}
+.hero-caption h2{ font-size: 2.8rem; font-weight: 700; margin: 0 0 8px; color: #FFD700; letter-spacing: 0.5px; text-shadow: 0 3px 8px rgba(0,0,0,0.8); }
+.hero-caption p{ margin:0; font-size: 1.2rem; font-weight: 600; }
+
+/* Responsive hero text scaling */
+@media (max-width: 800px){
+    .hero{ height: 40vh; }
+    .hero-caption h2{ font-size: 1.6rem; }
 }
 
 

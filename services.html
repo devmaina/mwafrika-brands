@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <meta name="description" content="Mwafrika Brands Services - Professional branding, printing, photography, video editing, and creative services.">
+    <meta name="keywords" content="services, branding, printing, photography, video editing, graphics">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mwafrika Brands - Services">
+    <meta property="og:description" content="Explore our comprehensive creative and branding services.">
+    <meta property="og:image" content="images/logo.PNG">
+    <meta property="og:url" content="https://mwafrika-brands.com/services.html">
+    <meta name="theme-color" content="#FFD700">
+    <link rel="canonical" href="https://mwafrika-brands.com/services.html">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="images/logo.PNG" sizes="192x192">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>:root{ --gradient: linear-gradient(135deg, rgba(255,215,0,0.5) 0%, rgba(255,237,78,0.5) 100%); } header, .top-banner, .card a, .quote-form button { background: var(--gradient) !important; }</style>
+    <title>Our Services - Mwafrika Brands</title>
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="logo.PNG" alt="Mwafrika Brands Logo">
+                <img src="images/logo.PNG" alt="Mwafrika Brands Logo">
             </a>
         </div>
         <nav>
@@ -31,19 +46,19 @@
 
         <div class="card-grid">
             <div class="card">
-                <img src="placeholder_logo.PNG" alt="Logo Design">
+                <img src="images/placeholder_logo.PNG" alt="Logo Design">
                 <h3>Logo Design</h3>
                 <p>Professional logo design services to establish your brand identity.</p>
                 <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Logo%20Design">Request a Quote</a>
             </div>
             <div class="card">
-                <img src="placeholder_graphics.PNG" alt="Graphics Design">
+                <img src="images/placeholder_graphics.PNG" alt="Graphics Design">
                 <h3>Graphics Design</h3>
                 <p>Creative graphic design solutions for your business.</p>
                 <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Graphics%20Design">Request a Quote</a>
             </div>
             <div class="card">
-                <img src="placeholder_web.PNG" alt="Web Design">
+                <img src="images/placeholder_web.PNG" alt="Web Design">
                 <h3>Web Design</h3>
                 <p>Custom web design and development services.</p>
                 <a href="https://wa.me/254714899775?text=I'm%20interested%20in%20Web%20Design">Request a Quote</a>
@@ -78,6 +93,11 @@
             });
         });
     });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        }
     </script>
 </body>
 </html>
